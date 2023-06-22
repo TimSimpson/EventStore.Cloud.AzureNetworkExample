@@ -24,7 +24,7 @@ plan:
     popd
 
 # deploys changes
-deploy:
+apply:
     #!/usr/bin/env bash
     pushd terraform
     terraform init

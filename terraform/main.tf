@@ -33,13 +33,6 @@ variable "region" {
   default     = "West US2"
 }
 
-variable "azure_subscription_id" {
-  type        = string
-  description = "Azure Subscruption ID"
-}
-
-
-
 data "azurerm_client_config" "current" {}
 
 data "azuread_client_config" "current" {}
@@ -130,4 +123,8 @@ output "eventstore_network_id" {
 
 output "eventstore_peering_id" {
   value = eventstorecloud_peering.example.id
+}
+
+output "azuread_service_principal_id" {
+  value = azuread_service_principal.peering.id
 }
